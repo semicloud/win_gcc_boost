@@ -1,0 +1,9 @@
+TestBoost_static.exe: TestBoost.o
+	g++ TestBoost.o -Wall -LC:\SDK\boost_1_69_0\bin\gcc_all_static\lib -lboost_filesystem-mgw82-mt-s-x32-1_69 -o TestBoost_static.exe
+	
+TestBoost.o: TestBoost.cpp
+	g++ -g -c TestBoost.cpp -IC:\SDK\boost_1_69_0
+	
+clean: 
+	del TestBoost.o
+	del TestBoost_static.exe

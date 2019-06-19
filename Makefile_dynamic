@@ -1,0 +1,13 @@
+TestBoost_dynamic.exe: TestBoost.o copy_dependency
+	g++ TestBoost.o -g -Wall -LC:\SDK\boost_1_69_0\bin\gcc\lib -lboost_filesystem-mgw82-mt-x32-1_69.dll -o TestBoost_dynamic.exe
+	
+TestBoost.o: TestBoost.cpp
+	g++ -c TestBoost.cpp -IC:\SDK\boost_1_69_0
+	
+copy_dependency: 
+	copy C:\SDK\boost_1_69_0\bin\gcc\lib\libboost_filesystem-mgw82-mt-x32-1_69.dll .\libboost_filesystem-mgw82-mt-x32-1_69.dll
+	
+clean: 
+	del TestBoost.o
+	del TestBoost_dynamic.exe
+	del libboost_filesystem-mgw82-mt-x32-1_69.dll
