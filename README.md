@@ -1,5 +1,7 @@
 # Windows平台MinGW GCC编译并使用C++ Boost
 
+[TOC]
+
 ## 前提
 
 操作系统：Windows 10，安装了MinGW，并将gcc.exe等程序添加到Path变量中。
